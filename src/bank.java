@@ -1,7 +1,7 @@
 	public class bank{
-		int balance = 2500;
-		String cardnumber = "Your account balance is:" +balance+ " MKD.";
-		String user = "4297-2460-1232-2060";
-		String pass = "2907";
+		int balance = 15000;
+		String cardnumber = "Your account balance is: " + balance + " MKD.";
+		String user = "4297-1111-2222-3333";
+		String pass = "1234";
 	}
 
