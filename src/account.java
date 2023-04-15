@@ -16,7 +16,7 @@ public class account {
 				System.out.println("Do you want to continue?");
 				boolean answer;
 				answer = input.nextBoolean();
-				if (answer == true) {
+				if (answer == true) {											//user inputs "true" or "false" to initiate further actions.
 					System.out.println("Would you like to make a deposit?");
 					boolean deposit;
 					deposit = input.nextBoolean();
@@ -25,9 +25,13 @@ public class account {
 						int deposit1;
 						deposit1 = input.nextInt();
 						obj1.balance = obj1.balance + deposit1;
-						System.out.println("Your new balance is: " + obj1.balance + " MKD.");
-						System.exit(0);
+						System.out.println("Your new balance is: " + obj1.balance + " MKD. Bank commission expenses amount to: "+obj1.commission(deposit1)+" MKD.");
+						System.exit(deposit1);
+						}
 					}
+				else {
+					System.exit(0);
+				}
 					System.out.println("Would you like to make a withdrawal?");
 					boolean withdraw;
 					withdraw = input.nextBoolean();
@@ -46,7 +50,14 @@ public class account {
 						}
 						
 					}
-				}				
+					System.out.println("Do you want to check expenses in bank commission?");
+					boolean check;
+					check = input.nextBoolean();
+					if (check == true) {
+						System.out.println("Your balance is: "+obj1.balance+" MKD.\n" + "Bank takes "+obj1.commission(0)+" MKD in commissions.");
+						System.exit(0);
+				}
+				
 			}
 			else {
 				System.out.println("Error, username or password is incorrect.");
