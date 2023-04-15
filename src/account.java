@@ -47,8 +47,7 @@ public class account {
 						else {
 							System.out.println("You can't withdraw that amount. You only have: "+obj1.balance+" MKD.");
 							System.exit(0);
-						}
-						
+						}						
 					}
 					System.out.println("Do you want to check expenses in bank commission?");
 					boolean check;
